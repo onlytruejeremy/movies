@@ -37,7 +37,7 @@ const Liked = () => {
     /*
 
     */
-  }, []);
+  }, [currentUser]);
   return (
     <Container>
       {cardsDisplay.map((card) => {

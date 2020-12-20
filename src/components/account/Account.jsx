@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 
-import { Container, Col, Row, Card, Button, CardDeck } from "react-bootstrap";
+import { Container, Row, Card } from "react-bootstrap";
 import { withRouter } from "react-router-dom";
 import { db } from "../../firebase";
 import { AuthContext } from "../../Auth";
@@ -9,7 +9,7 @@ const Account = (props) => {
   const [userInfo, setUserInfo] = useState({
     firstName: "",
     lastName: "",
-    email: ""
+    email: "",
   });
   const { currentUser } = useContext(AuthContext);
   useEffect(() => {
@@ -23,13 +23,13 @@ const Account = (props) => {
           setUserInfo({
             firstName,
             lastName,
-            email
+            email,
           });
         });
     } catch (error) {
       alert(error);
     }
-  }, []);
+  }, [currentUser]);
   return (
     <Container>
       <Card className="bg-dark text-warning">

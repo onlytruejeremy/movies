@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
-import { Container, Card, Col, Row, Button, Toast } from "react-bootstrap";
+import { Container, Card, Col, Row, Button } from "react-bootstrap";
 import { movieAPI as API } from "../../API";
 import { useParams, useHistory, withRouter } from "react-router-dom";
 import { db } from "../../firebase";
@@ -35,7 +35,7 @@ const Details = (props) => {
         }
       });
     }
-  }, [id]);
+  }, [id, currentUser]);
 
   const [displayLike, setDisplayLike] = useState(true);
   const back = (e) => {
