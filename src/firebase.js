@@ -7,6 +7,7 @@ const config = firebaseAPI;
 export const app =
   firebase.apps.length > 0 ? "" : firebase.initializeApp(config);
 
+firebase.firestore.setLogLevel("debug");
 export const db = firebase.firestore();
 
 export default { app, db };
