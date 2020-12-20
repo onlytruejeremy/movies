@@ -22,7 +22,7 @@ const Liked = () => {
         });
       });
       console.log(likes);
-      likes.map((item) => {
+      likes.forEach((item) => {
         fetch(`${API.details}${item}?api_key=${API.key}&language=en-US`)
           .then((res) => res.json())
           .then((res) => {

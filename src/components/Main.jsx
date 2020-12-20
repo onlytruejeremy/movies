@@ -36,7 +36,7 @@ const Main = (props) => {
     if (currentUser) {
       setLoggedIn(true);
     }
-  }, []);
+  }, [currentUser]);
   return (
     <Container className="mx-5 mx-auto">
       <Row>
