@@ -32,12 +32,7 @@ const Liked = () => {
       });
     };
     refCollect();
-
-    // get likes into cardData
-    /*
-
-    */
-  }, [currentUser]);
+  });
   return (
     <Container>
       {cardsDisplay.map((card) => {
