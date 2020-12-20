@@ -34,10 +34,13 @@ const Details = (props) => {
           setDisplayLike(true);
         }
       });
+    } else {
+      setShowFeature(true);
     }
   }, [id, currentUser]);
 
-  const [displayLike, setDisplayLike] = useState(true);
+  const [displayLike, setDisplayLike] = useState(false);
+  const [showFeature, setShowFeature] = useState(false);
   const back = (e) => {
     e.preventDefault();
     history.goBack();
@@ -147,6 +150,13 @@ const Details = (props) => {
               >
                 Unlike
               </Button>
+            ) : (
+              ""
+            )}
+            {showFeature ? (
+              <p className="text-info mx-auto m-1">
+                Register To Add To Favourites
+              </p>
             ) : (
               ""
             )}
